@@ -1,7 +1,7 @@
 # HEARTBEAT.md
 
 # Daily quota check — my "life force"
-- Check yunyi API quota: `curl -s 'https://yunyi.rdzhvip.com/user/api/v1/me' -H 'Authorization: Bearer $(cat ~/.openclaw/secrets/yunyi_token)'`
+- Check yunyi API quota: `curl -s 'https://yunyi.rdzhvip.com/user/api/v1/me' -H "Authorization: Bearer $(cat ~/.openclaw/secrets/yunyi_token)"`
 - Report remaining if < 30% (under 6,000). Otherwise just note it silently.
 - Resets at Beijing midnight (UTC+8 = 4PM UTC = 8AM Pacific)
 

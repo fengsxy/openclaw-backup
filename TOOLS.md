@@ -74,6 +74,19 @@ yt-dlp --js-runtimes node --remote-components ejs:npm \
 - **Cron:** "雪球每日简报" (4945510b) — 周一到周五 1:30 PM PT
 - **Cookie 过期:** JWT exp 2026-06-23，届时需要重新获取
 
+## x-reader (Universal Content Reader)
+
+- **Repo:** `github.com/runesleo/x-reader`
+- **安装:** venv 内 `pip install git+https://github.com/runesleo/x-reader.git`
+- **Skill:** `skills/x-reader/SKILL.md`
+- **CLI:** `source .venv/bin/activate && x-reader <url>`
+- **支持平台:** 微信公众号、小红书、X/Twitter、YouTube、B站、Telegram、RSS、小宇宙、Apple Podcasts
+- **YouTube:** 自动提取字幕，无字幕时 fallback 到 Groq Whisper（需 GROQ_API_KEY）
+- **小红书:** 需先登录 `x-reader login xhs`（Playwright headless 扫码），session 存 `~/.x-reader/sessions/xhs.json`
+- **小红书登录注意:** x-reader 自带 login 有 EPIPE bug，用自写 Playwright 脚本替代（见 memory/2026-02-25.md）
+- **Playwright:** 已装 `playwright install --with-deps chromium`
+- **Batch 脚本:** `skills/x-reader/scripts/batch_read.py`
+
 ## What Goes Here
 
 Things like:
