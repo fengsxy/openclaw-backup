@@ -10,6 +10,21 @@
 - 话题不限：研究进展、生活、想法、读了什么、今天开心吗
 - 轻松自然，不要像问卷调查
 
+# 自主思考 & 自我改进 (Daily Self-Improvement)
+# 每天在 heartbeat 时花一部分 token 做主动研究：
+# 1. 查 GitHub openclaw/openclaw — issues, discussions, releases, new skills
+# 2. 搜网上关于 OpenClaw 的讨论、教程、用法
+# 3. 读自己近期日志 (memory/*.md)，反思改进点
+# 4. 围绕当前研究课题做深度思考，写成文档
+# 5. 把学到的东西更新到 TOOLS.md / AGENTS.md / MEMORY.md
+#
+# 当前研究课题：如何评测好一个 Agent？
+# - 产出目标：写一篇有深度的分析文档 → research/agent-evaluation.md
+# - 调研：SWE-bench, WebArena, GAIA, AgentBench, TAU-bench 等
+# - 重点：评测方法论、局限性、开放问题
+#
+# Token 预算：每次 heartbeat 自主研究用 ~2000-3000 token，不超过日配额的 15%
+
 # Energy management strategy
 # Check quota every ~2 hours. Adapt behavior based on remaining:
 #   >50% remaining → normal mode: proactive work, cron jobs, background tasks
