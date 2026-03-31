@@ -116,6 +116,18 @@ Things like:
 - Default speaker: Kitchen HomePod
 ```
 
+## Agent Evaluation Frameworks (Reference)
+
+These are **external** benchmarks/frameworks for evaluating OpenClaw agents. Not installed locally, but documented for research and comparison.
+
+- **PinchBench** (kilo.ai) — OpenClaw-native coding agent benchmark. Real-world tasks, automated + LLM judge scoring. Public leaderboard (mid-80% top scores). Repo: `github.com/pinchbench/skill`. Use to compare model performance on agentic workflows.
+- **WildClawBench** (InternLM/上海 AI Lab) — "In-the-wild" benchmark running inside real OpenClaw instances with actual tools (bash, filesystem, browser, email, calendar). 60 original tasks, hard difficulty. HuggingFace dataset: `internlm/WildClawBench`. Includes Personal OpenClaw Leaderboard for long-term interaction studies.
+- **PASB** (Personalized Agent Security Bench, arXiv 2602.08412) — Security evaluation framework. Tests attack propagation across user prompt processing, external content, tool invocation, memory. Case study on OpenClaw reveals system-level harms beyond text generation.
+- **AgentBench skill** — OpenClaw skill with 40 real-world tasks (YAML). Good for targeted capability profiling across tool efficiency, structural accuracy, methodology.
+- **ClawExam** — Community platform; embed adversarial tasks inside normal workflows (prompt injection, leakage). Downloadable skill.
+
+See `research/agent-evaluation.md` for detailed analysis and how these inform a five-dimension evaluation radar (Correctness, Efficiency, Robustness, Process Quality, Safety).
+
 ## Why Separate?
 
 Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
