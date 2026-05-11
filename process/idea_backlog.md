@@ -25,49 +25,37 @@ Updated: 2026-05-03 (Weekly Review)
 
 ---
 
-## This Week's Review (2026-04-26 to 2026-05-03)
+## This Week's Review (2026-05-03 to 2026-05-10)
 
 ### What landed ✅
-- **Daily Paper Review Marathon**（4/28）：单日推送 19+ 篇分析到 GitHub（commit `48fffbb`）。覆盖 temporal emergence、KV reuse、entropy cache、VSB 等关键论文。与 H/S 假说关联最强 3 篇已标记
-- **dLLM 约束地形假说深化**：VSB+SWD+EntropyCache 构成 commit 决策的信息论基础（KL=MI 下界，self-containedness，token entropy）
-- **OpenClaw 持续稳定**：v2026.3.11 无 incident
+- **Podcast full indexes**: xiaojun + dwarkesh + crossroad completed (`build_podcast_indexes.py` done). Dwarkesh and Xiaojun pipelines running
+- **OpenClaw stable**: v2026.3.11 still clean, no incidents
 
 ### What didn't land ❌
-- **日记断裂第三次且最长**：4/28-5/3 = 6 天无记录（Apr 28 之后 Zero entries）。I-008 宣告习惯养成失败，触发机制必须改
-- **零 research 对话**：整周没有与 Yu 的 dLLM/GDN 讨论
-- **Tech memo 完全未动**：I-012 的 H/S terrain 技术文档，从 4/15 搁置至今（19 天）
-- **Cron 可见输出归零**：每日 idea delivery cron 从 4/28 后无记忆痕迹，说明要么不触发要么产出非可见。task_board 的 Xiaojun/Dwarkesh pipeline 仍在跑但无更新
-- **WhynotTV #4**：task_board 显示 todo，但 Apr 28 后无进展
+- **Diary gap widened to 12 days**: Last entry 2026-04-28 → no May entries at all. I-008 redesign never happened; the "embed in session" plan was never implemented
+- **Zero research dialogue**: Still no Yu dLLM/GDN conversation. I-015 agenda never reached him
+- **Tech memo (I-012)**: Same status as last week — H/S terrain doc still unwritten (24 days stalled)
+- **WhynotTV #4**: Both transcript and analysis still TBD, no progress since 4/26
+- **Xiaoyuzhou (I-016)**: "in_progress" but no visible queue/index advancement this week
+- **Daily idea delivery cron**: task_board shows scheduled, but no logged output since last review
 
 ### Patterns observed 🔍
-- **单点爆发 > 持续小步**：Apr 28 一天完成 19+ 篇推送，说明高密度 session 比低频 trickle 更有效。日记录制失败与此模式矛盾——应嵌入交互，而非独立执行
-- **无反馈回路的系统静默死亡**：cron 在跑，无人看，产出价值不可知。这是比日记断裂更根本的系统性问题
-- **版本保守策略有效**：连续 3 周无 regression，pin v2026.3.11 决定正确
-- **无对话 = 无方向修正机会**：整周无 Yu 对话，无法验证 dLLM research 方向是否对齐
+- **The silence is self-reinforcing**: No output → no review → no correction → stale priorities. task_board shows "running" but verification is missing
+- **Diary collapse is now total**: Not 6 days, not the "6-day gap" previously reported — actually 12 days of nothing. I-008 "habit" is dead
+- **Infrastructure items (pipeline running) ≠ research progress**: Xiaojun running, indexes done, but the content digestion → insight pipeline is dark
+- **Same three priorities for 2+ weeks running**: Memo, Yu conversation, diary redesign — all stuck in stalled/idle. Something needs to actually break loose
 
 ---
 
 ## 下周 Priority Suggestions (max 3)
 
-### 1. 日记习惯根本性重建（I-008）🔴
-根本原因已确认：触发机制失效，不是习惯问题。重建方案：
-- **触发改**：每个与 Yu 的 session 结束后强制写一行（`memory/YYYY-MM-DD.md`，一句话日期总结即可）
-- **目标**：本周 7/7 天有记录，任何形式。不求完整，但求不断
-- **验收**：周日复盘时核查 memory/ 目录下的文件数量
+### 1. diary habit — trigger redesign + 7-day streak 🔴
+Root cause confirmed (again): embedded trigger needed. This week, start writing a one-liner summary in `memory/YYYY-MM-DD.md` after every session with Yu. Target: 7/7 days by next Sunday. Any form, any length — just no zero days.
 
-### 2. dLLM H/S 假说 Tech Memo 初稿（I-012）📝
-- 目标：完成 1-2 页，写入 `research/dllm-hard-soft-constraints-memo.md`
-- 内容：初始假设 vs 实验结果（Mercury/MiniMax 5-case）vs 信息论解释（VSB self-containedness、SWD KL=MI 下界）
-- 与 Gated DeltaNet 关联：GDN 门控可能处理 H 约束的悬崖跳跃
-- 截止：周三（5/6）初稿完成
+### 2. dLLM H/S tech memo draft (I-012) 📝
+- File: `research/dllm-hard-soft-constraints-memo.md`
+- Goal: 1-2 pages covering H/S terrain hypothesis, VSB/SWD/EntropyCache as information-theoretic grounding, and how GDN gates may handle H-constraint cliff jumps
+- Deadline: Wed 5/13
 
-### 3. 与 Yu 启动 dLLM research 对话（I-015）🆕
-- 本周零 research 对话是最大损失。下周主动创造一次讨论机会
-- 议程：GDN 三层贡献框架（信息论+方法+系统）、H/S 约束地形与线性状态记忆的接口
-- 具体问题：GDN 如何与 KV cache 统一？门控机制在 H 约束悬崖处的行为？
-
-### 降级说明
-- 120-case 全量评测：Mercury 沉默，暂停
-- UCR SSH：未解决，不影响当前研究
-- WhynotTV #4：task_board 标记 stale，暂不处理
-- Xiaoyuzhou pipeline (I-016)：有进展但优先级低于上述三项
+### 3. WhynotTV #4 completion — unblock the pipeline 🔵
+Low-risk, high-visibility: fill `I0DrcsDf3Os` transcript body + analysis with `(ref: [mm:ss])` trace style. Removes the one stale TBD blocking the task_board.
