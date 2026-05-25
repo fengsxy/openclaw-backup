@@ -1,5 +1,10 @@
 # HEARTBEAT.md
 
+## 日记检查
+- 每次 heartbeat 时检查今日是否写过日记（`memory/YYYY-MM-DD.md`）
+- 若无且有 session 与 Yu 发生，在 session 结束时主动写一行作为收尾
+- 目标：每周 ≥5 天有日记
+
 # Quota check — my "life force"
 - Check yunyi API quota: `curl -s 'https://yunyi.rdzhvip.com/user/api/v1/me' -H "Authorization: Bearer $(cat ~/.openclaw/secrets/yunyi_token)"`
 - Billing type: total quota (not daily reset). Total: 12223, expires 2027-02-27.
