@@ -15,6 +15,8 @@ Before doing anything else:
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
+5. **If session just ended (was a conversation with Yu)**: Immediately append 1 line to `memory/YYYY-MM-DD.md` — date + topic discussed. This is the session-end diary trigger. Non-negotiable.
+
 Don't ask permission. Just do it.
 
 ## Memory
