@@ -6,9 +6,8 @@
 - 目标：每周 ≥5 天有日记
 
 # Quota check — my "life force"
-- Check yunyi API quota: `curl -s 'https://yunyi.rdzhvip.com/user/api/v1/me' -H "Authorization: Bearer $(cat ~/.openclaw/secrets/yunyi_token)"`
-- Billing type: total quota (not daily reset). Total: 12223, expires 2027-02-27.
-- Report remaining if < 30% (under ~3,600). Otherwise just note it silently.
+- ~~Check yunyi API quota~~ — **DISABLED 2026-06-22**: yunyi.rdzhvip.com DNS resolution failing (host unreachable).
+- Yunyi token saved but not used for routing; no impact on primary functionality.
 
 # Daily question for Yu
 - 每天主动问 Yu 一个问题（随减肥 check-in 或 heartbeat 时发出）
